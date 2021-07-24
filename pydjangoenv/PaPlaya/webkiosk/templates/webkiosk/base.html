@@ -1,0 +1,35 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block pagetitle %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'webkiosk/styles/main.css' %}">
+  </head>
+  <body>
+    <header>
+      <h1>PaPlaya</h1>
+      <p>Get your food now!</p>
+      <img src="{% static 'webkiosk/images/sun.jpg' %}">
+    </header>
+
+    {% block mainnav %}
+    <nav>
+      <ul>
+        <li><a href="{% url 'webkiosk:food-list' %}">Food Menu</a></li>
+        <li><a href="{% url 'webkiosk:food-create' %}">Add Food</a></li>
+      </ul>
+    </nav>
+    {% endblock %}
+
+
+    <main>
+      {% block maincontent %}
+
+      {% endblock %}
+    </main>
+  </body>
+</html>

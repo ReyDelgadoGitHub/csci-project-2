@@ -1,0 +1,21 @@
+{% extends 'webkiosk/base.html' %}
+
+{% block pagetitle %}PaPlaya - Add or Edit Food{% endblock %}
+
+{% block maincontent %}
+<h2>Add or Edit Food</h2>
+
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_ul }}
+  <input type="submit" name="" value="Submit">
+</form>
+
+<ul>
+  {% for message in messages %}
+  <li>{{ message }}</li>
+  {% endfor %}
+</ul>
+
+
+{% endblock %}

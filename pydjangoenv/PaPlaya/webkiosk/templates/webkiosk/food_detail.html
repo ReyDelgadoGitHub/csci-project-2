@@ -1,0 +1,11 @@
+{% extends 'webkiosk/base.html' %}
+
+{% block pagetitle %}PaPlaya - {{ food.name }}{% endblock %}
+
+{% block maincontent %}
+<h2>{{ food.name }}</h2>
+<ul>
+  <li>Description: {{ food.description }}</li>
+  <li>Price: Php {{ food.price }}</li>
+</ul>
+{% endblock %}
